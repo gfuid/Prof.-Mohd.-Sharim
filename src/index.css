@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Outfit", "Plus Jakarta Sans", sans-serif;
+
+  /* Premium Brand Color Palette */
+  --color-brand-blue: #2f6bfd;
+  --color-brand-blue-hover: #1b53e8;
+  --color-brand-blue-dark: #123bb0;
+  --color-brand-blue-light: #eef4ff;
+  --color-brand-blue-soft: #f4f8ff;
+  
+  --color-brand-navy: #0e1738;
+  --color-brand-navy-dark: #070c1e;
+  --color-brand-navy-card: #151f47;
+  
+  --color-text-dark: #0b132b;
+  --color-text-muted: #5d6b82;
+  --color-text-light: #8e9bb0;
+  
+  --color-bg-light: #f8faff;
+  --color-border-subtle: #e2e8f0;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #55637a;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: #0b132b;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Glassmorphism & Modern UI utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.dark-glass-panel {
+  background: rgba(14, 23, 56, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Smooth Card Hover Transitions */
+.card-hover-effect {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(15, 24, 48, 0.12), 0 0 0 1px rgba(47, 107, 253, 0.15);
+}
+
+.blue-card-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.blue-card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px -12px rgba(47, 107, 253, 0.45);
+}
+
+/* Button Shimmer Effect */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transform: rotate(30deg);
+  transition: transform 0.75s ease;
+}
+
+.btn-shimmer:hover::after {
+  transform: rotate(30deg) translate(50%, 50%);
+}
+
+/* Floating Animation */
+@keyframes softFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-soft-float {
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+/* Modern Minimalist Scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f8faff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+  border: 1.5px solid #f8faff;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Modal Inner Scrollbar */
+[data-lenis-prevent]::-webkit-scrollbar {
+  width: 5px;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+[data-lenis-prevent]::-webkit-scrollbar-thumb:hover {
+  background: #2f6bfd;
+}
