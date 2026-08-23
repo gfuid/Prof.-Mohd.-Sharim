@@ -8,6 +8,8 @@ import { Navbar } from './Navbar'
 import { Footer } from './Footer'
 import { BookingModal } from './BookingModal'
 import { Toast } from './Toast'
+import { WhatsAppHotline } from './WhatsAppHotline'
+import { AIChatbot } from './AIChatbot'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -94,6 +96,12 @@ export function Layout() {
       </main>
 
       <Footer />
+
+      {/* WhatsApp Floating Hotline */}
+      <WhatsAppHotline />
+
+      {/* AI Career Counselor Chatbot & Fast Flow Form */}
+      <AIChatbot />
 
       {/* Global Booking Modal */}
       <BookingModal

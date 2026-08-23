@@ -6,9 +6,10 @@ export const siteConfig = {
   tagline: 'Complete Career Support: Admissions, Skills & Placements',
   subTagline: 'Western UP, Uttarakhand & Pan-India Student Guidance',
 
-  phone: '+91 9541856602',
-  phoneDisplay: '+91 95418 56602',
-  email: 'mohd.sharim@gmail.com',
+  phone: '+91 8218322073',
+  phoneDisplay: '+91 82183 22073',
+  whatsappChatNumber: '919548156602',
+  email: 'mohd.sharim@live.com',
   location: 'Jhabrera, Uttarakhand, India',
   address: 'Jhabrera, Haridwar / Roorkee Region, Uttarakhand – 247665',
   websites: ['nextdisha.com', 'sharim.webnode.in'],
@@ -318,7 +319,7 @@ export const siteConfig = {
 
   ctaBanner: {
     title: 'Ready to secure your dream college seat or job?',
-    subtitle: 'Call Prof. Mohd. Sharim directly at +91 9541856602 or schedule a free 1-on-1 career counselling session.',
+    subtitle: 'Call Prof. Mohd. Sharim directly at +91 82183 22073 or schedule a free 1-on-1 career counselling session.',
     ctaText: 'BOOK FREE COUNSELLING SESSION',
     image: '/images/her.png',
   },

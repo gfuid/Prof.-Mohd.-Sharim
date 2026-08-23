@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Phone, Mail, MapPin, ExternalLink, Send, CircleCheckBig, Download } from 'lucide-react'
-import { profile, enquiryTopics } from '../data/site'
+import { siteConfig } from '../data/site'
 import { SectionHeading } from './SectionHeading'
 
 export function ContactSection() {
@@ -18,26 +18,26 @@ export function ContactSection() {
         <div className="mt-12 grid gap-8 lg:grid-cols-5">
           {/* Info */}
           <div className="lg:col-span-2">
-            <div className="h-full rounded-3xl bg-navy-deep p-8 text-white">
-              <h3 className="text-lg font-semibold">{profile.name}</h3>
-              <p className="mt-1 text-sm text-white/60">{profile.title}</p>
+            <div className="h-full rounded-3xl bg-[#090e24] p-8 text-white">
+              <h3 className="text-lg font-semibold">{siteConfig.consultantName}</h3>
+              <p className="mt-1 text-sm text-white/60">{siteConfig.consultantTitle}</p>
 
               <ul className="mt-7 space-y-5 text-sm">
                 <li className="flex items-start gap-3">
-                  <Phone className="mt-0.5 h-5 w-5 flex-none text-royal" />
-                  <a href={`tel:${profile.phoneRaw}`} className="text-white/70 hover:text-white">
-                    {profile.phone}
+                  <Phone className="mt-0.5 h-5 w-5 flex-none text-[#2f6bfd]" />
+                  <a href={`tel:${siteConfig.phone}`} className="text-white/70 hover:text-white">
+                    {siteConfig.phoneDisplay}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Mail className="mt-0.5 h-5 w-5 flex-none text-royal" />
-                  <a href={`mailto:${profile.email}`} className="text-white/70 hover:text-white">
-                    {profile.email}
+                  <Mail className="mt-0.5 h-5 w-5 flex-none text-[#2f6bfd]" />
+                  <a href={`mailto:${siteConfig.email}`} className="text-white/70 hover:text-white">
+                    {siteConfig.email}
                   </a>
                 </li>
                 <li className="flex items-start gap-3">
-                  <MapPin className="mt-0.5 h-5 w-5 flex-none text-royal" />
-                  <span className="text-white/70">{profile.location}</span>
+                  <MapPin className="mt-0.5 h-5 w-5 flex-none text-[#2f6bfd]" />
+                  <span className="text-white/70">{siteConfig.location}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <ExternalLink className="mt-0.5 h-5 w-5 flex-none text-royal" />
