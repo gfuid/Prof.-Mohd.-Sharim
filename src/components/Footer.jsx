@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, ArrowUp, GraduationCap } from 'lucide-react'
 import { siteConfig } from '../data/site'
+import logo from "../assets/logo.jpeg"
 
 function FacebookIcon(props) {
   return (
@@ -66,11 +67,11 @@ export function Footer() {
           <div className="lg:col-span-4" data-aos="fade-up">
             <Link to="/" className="inline-flex items-center gap-3 mb-5 group">
               <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#2f6bfd] text-white shadow-md shadow-[#2f6bfd]/25">
-                <GraduationCap className="w-6 h-6" />
+                <img src={logo} alt="Logo" className="w-6 h-6" />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-extrabold tracking-tight text-white uppercase leading-tight">
-                  PROF. MOHD. SHARIM
+                  Nexdisha Careers
                 </span>
                 <span className="text-[10px] font-extrabold text-[#2f6bfd] tracking-wider uppercase">
                   Admissions &amp; Placements Hub

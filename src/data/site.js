@@ -5,15 +5,15 @@ export const siteConfig = {
   consultantTitle: 'Industrial QA & QMS Leader | Education & Career Strategist',
   tagline: 'Complete Career Support: Admissions, Skills & Placements',
   subTagline: 'Western UP, Uttarakhand & Pan-India Student Guidance',
-  
+
   phone: '+91 9541856602',
   phoneDisplay: '+91 95418 56602',
   email: 'mohd.sharim@gmail.com',
   location: 'Jhabrera, Uttarakhand, India',
   address: 'Jhabrera, Haridwar / Roorkee Region, Uttarakhand – 247665',
   websites: ['nextdisha.com', 'sharim.webnode.in'],
-  copyright: '© 2024 Prof. Mohd. Sharim — Admissions & Placements Hub. All Rights Reserved',
-  
+  copyright: '© 2026 Prof. Mohd. Sharim — Admissions & Placements Hub. All Rights Reserved',
+
   navLinks: [
     { label: 'HOME', to: '/' },
     {

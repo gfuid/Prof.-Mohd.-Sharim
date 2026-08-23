@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown, Menu, X, ArrowRight, Phone, Mail, MapPin, GraduationCap, Sparkles } from 'lucide-react'
 import { siteConfig } from '../data/site'
+import logo from "../assets/logo.jpeg"
+
 
 export function Navbar({ onOpenBooking }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -62,22 +64,21 @@ export function Navbar({ onOpenBooking }) {
 
       {/* Main Nav Bar */}
       <div
-        className={`transition-all duration-300 ${
-          scrolled
-            ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-lg shadow-slate-900/5'
-            : 'bg-white border-b border-slate-100 py-3.5'
-        }`}
+        className={`transition-all duration-300 ${scrolled
+          ? 'bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-3 shadow-lg shadow-slate-900/5'
+          : 'bg-white border-b border-slate-100 py-3.5'
+          }`}
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             {/* Brand Logo */}
             <Link to="/" className="flex items-center gap-3 group">
               <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#2f6bfd] to-[#1b53e8] text-white shadow-md shadow-[#2f6bfd]/25 group-hover:scale-105 transition-transform duration-300">
-                <GraduationCap className="w-5 h-5" />
+                <img src={logo}></img>
               </div>
               <div className="flex flex-col">
                 <span className="text-lg sm:text-xl font-extrabold tracking-tight text-[#0b132b] group-hover:text-[#2f6bfd] transition-colors leading-tight font-display">
-                  PROF. MOHD. SHARIM
+                  Nexdisha careers
                 </span>
                 <span className="text-[9.5px] font-extrabold text-[#2f6bfd] tracking-wider uppercase">
                   Admissions &amp; Placements Hub
@@ -103,29 +104,26 @@ export function Navbar({ onOpenBooking }) {
                     >
                       <button
                         type="button"
-                        className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors duration-200 cursor-pointer ${
-                          item.label === 'ADMISSIONS' || item.label === 'PLACEMENTS'
-                            ? 'text-[#2f6bfd] font-extrabold'
-                            : isActive
+                        className={`flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider transition-colors duration-200 cursor-pointer ${item.label === 'ADMISSIONS' || item.label === 'PLACEMENTS'
+                          ? 'text-[#2f6bfd] font-extrabold'
+                          : isActive
                             ? 'text-[#2f6bfd]'
                             : 'text-slate-700 hover:text-[#2f6bfd]'
-                        }`}
+                          }`}
                       >
                         {item.label}
                         <ChevronDown
-                          className={`w-3.5 h-3.5 transition-transform duration-200 ${
-                            activeDropdown === item.label ? 'rotate-180 text-[#2f6bfd]' : 'text-slate-400'
-                          }`}
+                          className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180 text-[#2f6bfd]' : 'text-slate-400'
+                            }`}
                         />
                       </button>
 
                       {/* Dropdown Menu */}
                       <div
-                        className={`absolute left-0 top-full mt-1.5 w-72 rounded-2xl bg-white/95 backdrop-blur-md p-2.5 shadow-2xl shadow-slate-900/10 border border-slate-100 transition-all duration-200 origin-top z-50 ${
-                          activeDropdown === item.label
-                            ? 'opacity-100 scale-100 pointer-events-auto visible translate-y-0'
-                            : 'opacity-0 scale-95 pointer-events-none invisible -translate-y-1'
-                        }`}
+                        className={`absolute left-0 top-full mt-1.5 w-72 rounded-2xl bg-white/95 backdrop-blur-md p-2.5 shadow-2xl shadow-slate-900/10 border border-slate-100 transition-all duration-200 origin-top z-50 ${activeDropdown === item.label
+                          ? 'opacity-100 scale-100 pointer-events-auto visible translate-y-0'
+                          : 'opacity-0 scale-95 pointer-events-none invisible -translate-y-1'
+                          }`}
                       >
                         <div className="px-3 py-1.5 mb-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100">
                           {item.label} Services
@@ -149,9 +147,8 @@ export function Navbar({ onOpenBooking }) {
                   <Link
                     key={item.label}
                     to={item.to}
-                    className={`text-xs font-bold uppercase tracking-wider transition-colors duration-200 ${
-                      isActive ? 'text-[#2f6bfd]' : 'text-slate-700 hover:text-[#2f6bfd]'
-                    }`}
+                    className={`text-xs font-bold uppercase tracking-wider transition-colors duration-200 ${isActive ? 'text-[#2f6bfd]' : 'text-slate-700 hover:text-[#2f6bfd]'
+                      }`}
                   >
                     {item.label}
                   </Link>
