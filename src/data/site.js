@@ -9,7 +9,7 @@ export const siteConfig = {
   phone: '+91 8218322073',
   phoneDisplay: '+91 82183 22073',
   whatsappChatNumber: '919548156602',
-  email: 'mohd.sharim@live.com',
+  email: 'ceo@nexdisha.com',
   location: 'Jhabrera, Uttarakhand, India',
   address: 'Jhabrera, Haridwar / Roorkee Region, Uttarakhand – 247665',
   websites: ['nextdisha.com', 'sharim.webnode.in'],
