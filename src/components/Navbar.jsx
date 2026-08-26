@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronDown, Menu, X, ArrowRight, Phone, Mail, MapPin, GraduationCap, Sparkles } from 'lucide-react'
 import { siteConfig } from '../data/site'
-import logo from "../assets/logo.jpeg"
+import logo from "../assets/logo.png"
 
 
 export function Navbar({ onOpenBooking }) {
@@ -73,8 +73,8 @@ export function Navbar({ onOpenBooking }) {
           <div className="flex items-center justify-between">
             {/* Brand Logo */}
             <Link to="/" className="flex items-center gap-3 group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-[#2f6bfd] to-[#1b53e8] text-white shadow-md shadow-[#2f6bfd]/25 group-hover:scale-105 transition-transform duration-300">
-                <img src={logo}></img>
+              <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-white border border-slate-100 shadow-sm p-1 group-hover:scale-105 group-hover:shadow-md transition-all duration-300 overflow-hidden">
+                <img src={logo} alt="Nexdisha Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg sm:text-xl font-extrabold tracking-tight text-[#0b132b] group-hover:text-[#2f6bfd] transition-colors leading-tight font-display">

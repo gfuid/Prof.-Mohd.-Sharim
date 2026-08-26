@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, ArrowUp, GraduationCap } from 'lucide-react'
 import { siteConfig } from '../data/site'
-import logo from "../assets/logo.jpeg"
+import logo from "../assets/logo.png"
 
 function FacebookIcon(props) {
   return (
@@ -66,8 +66,8 @@ export function Footer() {
           {/* Col 1: Brand Info */}
           <div className="lg:col-span-4" data-aos="fade-up">
             <Link to="/" className="inline-flex items-center gap-3 mb-5 group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#2f6bfd] text-white shadow-md shadow-[#2f6bfd]/25">
-                <img src={logo} alt="Logo" className="w-6 h-6" />
+              <div className="flex items-center justify-center w-11 h-11 rounded-xl bg-white p-1 shadow-md shadow-[#2f6bfd]/25 overflow-hidden">
+                <img src={logo} alt="Nexdisha Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-extrabold tracking-tight text-white uppercase leading-tight">

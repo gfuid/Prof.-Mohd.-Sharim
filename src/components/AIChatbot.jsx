@@ -12,7 +12,7 @@ import {
 } from 'lucide-react'
 import { sendChatMessage } from '../services/aiService'
 import { siteConfig } from '../data/site'
-import logo from '../assets/logo.jpeg'
+import logo from '../assets/logo.png'
 
 const INITIAL_MESSAGES = [
   {
